@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Merriweather:wght@300;400;700&display=swap');
+
+/* Define your color palette and fonts */
+:root {
+  --primary-color: #6d8a9a; /* A sophisticated dusty blue */
+  --secondary-color: #d1c4e9; /* A light lavender */
+  --text-color: #333;
+  --bg-color: #ffffff;
+  --light-gray: #f4f4f4;
+  --border-color: #ddd;
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+/* Base responsive layout */
+body {
+  min-height: 100vh;
+  background-color: rgb(249 250 251);
+}
+
+/* Main content area */
+.main-content {
+  padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding-left: 16rem;
+  }
+}
+
+/* Container for pages */
+.page-container {
+  padding: 1rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    padding: 2rem;
+  }
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+/* Form controls */
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-color);
+  border-color: transparent;
+}
+
+/* Button styles */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: #678894;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #557381;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Base styles for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Base button style (you'll see 'primary-btn' used later) */
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.primary-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: #5a7484; /* Darker shade */
+}
+
+/* Base form styles */
+input,
+textarea {
+  padding: 12px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+}

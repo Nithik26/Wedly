@@ -1,0 +1,154 @@
+/* src/assets/Checklist.css */
+.checklist-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.checklist-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.checklist-container h1 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.progress-container {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+.add-item-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.add-item-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.add-item-input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.add-item-button {
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-item-button:hover {
+  background-color: #5a7484;
+}
+
+.checklist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.checklist-item:hover {
+  background: #f1f3f5;
+}
+
+.checklist-item.completed {
+  opacity: 0.7;
+}
+
+.item-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.item-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.item-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+.checklist-item.completed .item-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.delete-button:hover {
+  opacity: 1;
+}
+
+.checklist-loading,
+.checklist-error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.checklist-error {
+  color: #dc3545;
+}

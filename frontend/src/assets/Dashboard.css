@@ -1,0 +1,126 @@
+/* Overall Page Layout */
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f8f9fb;
+}
+
+/* Navbar + Body */
+.dashboard-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 60px; /* assuming Navbar height ~60px */
+  bottom: 0;
+  left: 0;
+  padding: 1rem 0;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+/* Sidebar Links */
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.sidebar-link {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: #ffeaea;
+}
+
+.sidebar-link.active {
+  background: #ff6b6b;
+  color: white;
+  font-weight: bold;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.profile-avatar {
+  font-size: 1.8rem;
+}
+
+.profile-name {
+  font-weight: 600;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.logout-btn:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.dashboard-main {
+  flex: 1;
+  margin-left: 250px; /* to make space for sidebar */
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.dashboard-home-container {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.dashboard-home-container h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.dashboard-home-container p {
+  font-size: 1.1rem;
+  color: #666;
+}

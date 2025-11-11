@@ -1,0 +1,212 @@
+/* ======================================
+   🌸 WEDLY NAVBAR (Modern Dashboard Look)
+====================================== */
+
+/* ===== NAVBAR WRAPPER ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 2rem;
+  background-color: #678894;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Smooth hover background (slightly darker on scroll or hover) */
+.navbar:hover {
+  background-color: #5c7c88;
+}
+
+/* ===== LEFT SECTION ===== */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ===== WEDLY LOGO BUTTON ===== */
+.navbar-logo-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: opacity 0.25s ease, transform 0.15s ease;
+}
+
+.navbar-logo-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* ===== SIDEBAR TOGGLE BUTTON ===== */
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding-right: 0.3rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+  color: #ffdada;
+  transform: scale(1.15);
+}
+
+/* ===== RIGHT SECTION ===== */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+/* ===== NAVBAR LINKS ===== */
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.25s ease, border-bottom 0.2s ease;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-link:hover {
+  color: #ffeaea;
+  border-bottom: 2px solid #ffeaea;
+}
+
+/* ===== PROFILE BUTTON & DROPDOWN ===== */
+.profile-container {
+  position: relative;
+}
+
+.profile-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+}
+
+.profile-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== DROPDOWN MENU ===== */
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 120%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  min-width: 150px;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== DROPDOWN BUTTON ===== */
+.logout-button {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  font-weight: 600;
+  text-align: left;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #ffeaea;
+  color: #d94848;
+}
+
+/* ===== LOGIN BUTTON (WHEN LOGGED OUT) ===== */
+.navbar-item .navbar-link.login {
+  background: #fff;
+  color: #678894;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.navbar-item .navbar-link.login:hover {
+  background: #f8f8f8;
+  transform: translateY(-1px);
+}
+
+/* ===== RESPONSIVE (TABLET & MOBILE) ===== */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .navbar-menu {
+    gap: 1rem;
+  }
+
+  .navbar-link {
+    font-size: 0.95rem;
+  }
+
+  .navbar-logo-btn {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-menu {
+    gap: 0.8rem;
+  }
+
+  .sidebar-toggle {
+    font-size: 1.5rem;
+  }
+
+  .navbar-logo-btn {
+    font-size: 1.4rem;
+  }
+}
